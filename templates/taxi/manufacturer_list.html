@@ -1,22 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Manufacturers</h1>
-<table>
+  <h1>Manufacturers</h1>
+  <table>
     <thead>
-        <tr>
-            <th>Name</th>
-            <th>Country</th>
-        </tr>
+    <tr>
+      <th>Name</th>
+      <th>Country</th>
+    </tr>
     </thead>
     <tbody>
-        {% for manufacturer in object_list %}
-        <tr>
-            <td>{{ manufacturer.name }}</td>
-            <td>{{ manufacturer.country }}</td>
-        </tr>
-        {% endfor %}
+    {% for manufacturer in object_list %}
+      <tr>
+        <td>{{ manufacturer.name }}</td>
+        <td>{{ manufacturer.country }}</td>
+      </tr>
+    {% endfor %}
     </tbody>
-</table>
-{% include "includes/pagination.html" %}
+  </table>
+  {% include "includes/pagination.html" %}
 {% endblock %}
